@@ -1,0 +1,31 @@
+package repository
+
+import (
+	"context"
+	"database/sql"
+	"fmt"
+	"domain"
+)
+
+type {name}Repository struct {
+	DB *sql.DB
+}
+
+func New{name_u}Repository(db *sql.DB) domain.{name_u}Repository {
+	return &{name}Repository{
+		DB: db,
+	}
+}
+
+func  (r *{name}Repository)  Find(ctx context.Context) (*[]domain.{name}, error) {
+    //@todo implement find
+}
+func (r *{name}Repository) 	Create(ctx context.Context, a *domain.{name}) error {
+    //@todo implement Create
+}
+func   (r *{name}Repository)   Update(ctx context.Context, a *domain.{name}) error {
+    //@todo implement Update
+}
+func   (r *{name}Repository)   Delete(ctx context.Context, a *domain.{name}) error {
+    //@todo implement Delete
+}

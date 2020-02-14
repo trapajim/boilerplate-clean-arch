@@ -1,0 +1,34 @@
+package usecase
+
+import (
+	"context"
+	"time"
+	"domain"
+)
+
+type {name}Usecase struct {
+    repository domain.{name}Repository
+	contextTimeout time.Duration
+}
+
+// NewUserUsecase will create new an userUsecase object representation of user.Usecase interface
+func New{name_u}Usecase(repository domain.{name}Repository, timeout time.Duration) domain.{name_u}Usecase {
+	return &{name}Usecase{
+		repository:       repository,
+		contextTimeout: timeout,
+	}
+}
+
+
+func  (r *{name}Usecase)    Find(ctx context.Context) (*[]domain.{name}, error) {
+    //@todo implement find
+}
+func (r *{name}Usecase)	Create(ctx context.Context, a *domain.{name}) error {
+    //@todo implement Create
+}
+func  (r *{name}Usecase)  Update(ctx context.Context, a *domain.{name}) error {
+    //@todo implement Update
+}
+func  (r *{name}Usecase)  Delete(ctx context.Context, a *domain.{name}) error {
+    //@todo implement Delete
+}

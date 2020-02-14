@@ -1,0 +1,19 @@
+package domain
+
+import "context"
+
+{struct}
+
+type {name}Repository interface {
+    Find(ctx context.Context) (*{name}, error)
+	Create(ctx context.Context, a *{name}) error
+	Update(ctx context.Context, a *{name}) error
+    Delete(ctx context.Context, a *{name}) error
+}
+
+type {name}Usecase interface {
+	Find(ctx context.Context) (*[]{name}, error)
+	Create(ctx context.Context, a *{name}) error
+    Update(ctx context.Context, a *{name}) error
+    Delete(ctx context.Context, a *{name}) error
+}
